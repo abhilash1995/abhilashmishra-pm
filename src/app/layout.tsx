@@ -1,7 +1,6 @@
 import { siteUrl } from '@/lib/site';
 import type { Metadata, Viewport } from 'next';
 import { Header, Footer } from '@/components/ui';
-import { profile } from '@/data/content';
 import './globals.css';
 
 export const metadata: Metadata = {
