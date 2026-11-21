@@ -9,12 +9,12 @@ import { studies } from '@/data/content';
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return studies.map((study) => ({ slug: study.slug }));
+  return [...studies.map((study) => ({ slug: study.slug })), { slug: 'developer-api-platform' }];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const study = studies.find((item) => item.slug === slug);
+  const study = studies.find((item) => item.slug === (slug === 'developer-api-platform' ? 'api-gateway' : slug));
   if (!study) return { title: 'Not found' };
   return {
     title: study.title,
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CaseStudyPage({ params }: Props) {
   const { slug } = await params;
-  const study = studies.find((item) => item.slug === slug);
+  const study = studies.find((item) => item.slug === (slug === 'developer-api-platform' ? 'api-gateway' : slug));
   if (!study) notFound();
   const index = studies.findIndex((item) => item.slug === slug);
   const next = studies[(index + 1) % studies.length];
