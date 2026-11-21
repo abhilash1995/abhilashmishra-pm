@@ -1,0 +1,67 @@
+name: Deploy portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build and verify static export
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Lint
+        run: npm run lint
+      - name: Export static site
+        run: npm run build
+        env:
+          PAGES_BASE_PATH: /abhilashmishra-pm
+          NEXT_PUBLIC_BASE_PATH: /abhilashmishra-pm
+          NEXT_PUBLIC_SITE_URL: https://abhilash1995.github.io/abhilashmishra-pm
+      - name: Type-check
+        run: npm run typecheck
+      - name: Check export contents
+        run: |
+          test -f out/index.html
+          test -f out/Abhilash-Mishra-CV.pdf
+          test -f out/visuals/hero-system.svg
+          test -d out/work
+          find out/work -name index.html | grep -q index.html
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    name: Publish GitHub Pages
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

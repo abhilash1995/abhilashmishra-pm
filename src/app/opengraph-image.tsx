@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { ImageResponse } from 'next/og';
 export const alt = 'Abhilash Mishra — Enterprise Product Manager';
 export const size = { width: 1200, height: 630 };
