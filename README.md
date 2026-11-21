@@ -1,3 +1,5 @@
+> **Version 3 (CV-complete):** Eight case studies across API Gateway, Developer Experience, Climate Maps, MapTiles, cross-company Connected Device Lifecycle, enterprise provisioning, AI-assisted support and Ambee for Academia. See [CV_COVERAGE_AUDIT_V3.md](CV_COVERAGE_AUDIT_V3.md) for the 27/27 professional-experience bullet coverage map. This remains a static Next.js app suitable for GitHub Pages.
+
 # Abhilash Mishra — Enterprise Product Manager Portfolio
 
 A complete Next.js App Router portfolio, developed from **21112026_AbhilashCV_Updated.pdf** (21 November 2026), with two separately evidenced Anthropic course completions.

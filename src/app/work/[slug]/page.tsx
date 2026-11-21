@@ -36,7 +36,7 @@ export default async function CaseStudyPage({ params }: Props) {
       <div className="shell">
         <div className="study-breadcrumb"><Link href="/#work">← All work</Link><span> / </span><span>{study.company}</span></div>
         <header className="study-hero">
-          <div className="study-meta"><span>CASE STUDY {study.index} / 05</span><span>{study.category}</span></div>
+          <div className="study-meta"><span>CASE STUDY {study.index} / 08</span><span>{study.category}</span></div>
           <h1>{study.title}</h1>
           <p className="study-deck">{study.overview}</p>
           <div className="study-byline"><div><span>COMPANY</span><strong>{study.company}</strong></div><div><span>ROLE</span><strong>{study.role}</strong></div><div><span>PERIOD</span><strong>{study.year}</strong></div></div>
