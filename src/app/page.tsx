@@ -1,3 +1,4 @@
+import { publicAsset } from '@/lib/site';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowIcon, SectionLabel } from '@/components/ui';
@@ -18,7 +19,7 @@ export default function Home() {
         </div>
         <aside className="hero-aside" aria-label="Professional overview">
           <div className="aside-top">BETWEEN SOFTWARE & THE FIELD <span>001 / 2026</span></div>
-          <div className="hero-visual"><Image src="/visuals/hero-system.svg" width={1080} height={600} alt="Illustrative connection between APIs, enterprise workflows, connected devices and product data" priority /></div>
+          <div className="hero-visual"><Image src={publicAsset('/visuals/hero-system.svg')} width={1080} height={600} alt="Illustrative connection between APIs, enterprise workflows, connected devices and product data" priority /></div>
           <p>Product work across APIs, enterprise workflows, and the connected devices they serve.</p>
           <div className="aside-bottom"><span>9 years in product & delivery</span><span className="tiny-star" aria-hidden="true">✳</span></div>
         </aside>

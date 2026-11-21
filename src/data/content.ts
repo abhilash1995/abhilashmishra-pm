@@ -1,3 +1,5 @@
+import { publicAsset } from '@/lib/site';
+
 /**
  * Editorial source of truth:
  * /public/Abhilash-Mishra-CV.pdf (user's 21 Nov 2026 CV).
@@ -12,7 +14,7 @@ export const profile = {
   location: 'Bengaluru, India',
   email: 'mishraabhilash1995@gmail.com',
   linkedIn: 'https://www.linkedin.com/in/abhilashmishra-pm/',
-  cv: '/Abhilash-Mishra-CV.pdf',
+  cv: publicAsset('/Abhilash-Mishra-CV.pdf'),
   descriptor: 'B2B SaaS · APIs · IoT · UCaaS · AI',
 } as const;
 
@@ -43,7 +45,7 @@ export type Study = {
 export const studies: Study[] = [
   {
     slug: 'enterprise-provisioning',
-    visual: { src: '/visuals/enterprise-provisioning.svg', alt: 'Conceptual visual comparing multi-user provisioning without Shared Line Group to the single-user configuration required by the customer' },
+    visual: { src: publicAsset('/visuals/enterprise-provisioning.svg'), alt: 'Conceptual visual comparing multi-user provisioning without Shared Line Group to the single-user configuration required by the customer' },
     index: '01',
     category: 'Enterprise workflows',
     company: 'RingCentral',
@@ -91,7 +93,7 @@ export const studies: Study[] = [
   },
   {
     slug: 'developer-api-platform',
-    visual: { src: '/visuals/developer-api-platform.svg', alt: 'Illustrative flow from environmental data sources through API gateway controls to developer portal and enterprise dashboard' },
+    visual: { src: publicAsset('/visuals/developer-api-platform.svg'), alt: 'Illustrative flow from environmental data sources through API gateway controls to developer portal and enterprise dashboard' },
     index: '02',
     category: 'API & developer platforms',
     company: 'Ambee',
@@ -142,7 +144,7 @@ export const studies: Study[] = [
   },
   {
     slug: 'climate-maps',
-    visual: { src: '/visuals/climate-maps.svg', alt: 'Abstract illustrative map with air quality, pollen, wildfire, weather, and 48-hour historical controls, not real readings' },
+    visual: { src: publicAsset('/visuals/climate-maps.svg'), alt: 'Abstract illustrative map with air quality, pollen, wildfire, weather, and 48-hour historical controls, not real readings' },
     index: '03',
     category: '0→1 product launches',
     company: 'Ambee',
@@ -192,7 +194,7 @@ export const studies: Study[] = [
   },
   {
     slug: 'ai-self-service',
-    visual: { src: '/visuals/ai-self-service.svg', alt: 'Illustrative guided-support journey from device setup question through AVA assistance to guidance or support handoff' },
+    visual: { src: publicAsset('/visuals/ai-self-service.svg'), alt: 'Illustrative guided-support journey from device setup question through AVA assistance to guidance or support handoff' },
     index: '04',
     category: 'AI & workflow automation',
     company: 'RingCentral',
@@ -239,7 +241,7 @@ export const studies: Study[] = [
   },
   {
     slug: 'ambees-academia',
-    visual: { src: '/visuals/ambees-academia.svg', alt: 'Conceptual diagram of one shared SSO capability serving enterprise API dashboard access and academic-account handling' },
+    visual: { src: publicAsset('/visuals/ambees-academia.svg'), alt: 'Conceptual diagram of one shared SSO capability serving enterprise API dashboard access and academic-account handling' },
     index: '05',
     category: '0→1 / access & onboarding',
     company: 'Ambee',
@@ -344,19 +346,19 @@ export const independentWork = [
     kind: 'Shipped product',
     text: 'An AI-powered SaaS product for preparing pitch decks and communication workflows with LLM-assisted generation.',
     href: 'https://www.getpulsestack.com/',
-    visual: '/visuals/pitchperfect.svg'
+    visual: publicAsset('/visuals/pitchperfect.svg')
   },
   {
     name: 'Smart Token Calling Queue',
     kind: 'Independent prototype',
     text: 'A voice-enabled queue announcement and token calling system built for outpatient departments and banks.',
-    visual: '/visuals/token-queue.svg'
+    visual: publicAsset('/visuals/token-queue.svg')
   },
   {
     name: 'WhatsApp Voice Notifier',
     kind: 'Independent prototype',
     text: 'Appointment reminders and patient follow-up notifications for clinics and diagnostics, using messaging and workflow automation.',
-    visual: '/visuals/voice-notifier.svg'
+    visual: publicAsset('/visuals/voice-notifier.svg')
   }
 ] as const;
 
@@ -369,6 +371,6 @@ export const development = [
 
 // Separately evidenced by the user's Anthropic learning screenshot, not the Nov CV.
 export const completedCourses = [
-  { title: 'Claude Code 101', issuer: 'Anthropic', date: '01 Nov 2026', details: '12 lessons · 1 quiz · 1.5 hours', visual: '/visuals/claude-code-badge.png' },
-  { title: 'Introduction to Claude Cowork', issuer: 'Anthropic', date: '01 Nov 2026', details: '14 lessons · 1 quiz · 2.5 hours', visual: '/visuals/cowork-badge.png' }
+  { title: 'Claude Code 101', issuer: 'Anthropic', date: '01 Nov 2026', details: '12 lessons · 1 quiz · 1.5 hours', visual: publicAsset('/visuals/claude-code-badge.png') },
+  { title: 'Introduction to Claude Cowork', issuer: 'Anthropic', date: '01 Nov 2026', details: '14 lessons · 1 quiz · 2.5 hours', visual: publicAsset('/visuals/cowork-badge.png') }
 ] as const;

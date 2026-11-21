@@ -1,3 +1,4 @@
+import { siteUrl } from '@/lib/site';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: study.title,
     description: study.overview,
-    alternates: { canonical: `/work/${study.slug}` },
+    alternates: { canonical: `${siteUrl}/work/${study.slug}/` },
     openGraph: { title: study.title, description: study.overview, type: 'article' }
   };
 }
