@@ -371,3 +371,36 @@ em { color: #7a4935; font-weight: inherit; }
   .supporting-card:last-child { border-bottom: 0; }
   .supporting-metric { max-width: 500px; margin-top: 10px; }
 }
+
+/* V3: documentary product-domain and CV coverage sections */
+.expertise-section {padding-top:96px;padding-bottom:105px}
+.expertise-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.expertise-card {border:1px solid var(--line);background:var(--paper);padding:32px 34px;display:flex;flex-direction:column;min-height:322px}
+.expertise-no {color:var(--accent);font-weight:700;font-size:10px;letter-spacing:.14em}
+.expertise-card h3 {font-family:var(--serif);font-size:clamp(25px,2.5vw,36px);font-weight:400;line-height:1.12;margin:19px 0 12px;letter-spacing:-.025em}
+.expertise-card p {font-size:13px;color:var(--muted);line-height:1.7;margin:0 0 17px}
+.expertise-evidence {border-top:1px solid var(--line);padding-top:15px;margin-top:auto;font-size:11px;font-weight:700}
+.expertise-links {margin-top:11px;display:flex;flex-direction:column}
+.expertise-links a {display:flex;align-items:center;justify-content:space-between;gap:16px;color:#405849;font-size:11px;padding:10px 0;border-bottom:1px solid #e4e6df}
+.expertise-links a:hover {color:var(--accent)}
+.expertise-links svg {width:15px;height:15px}
+.depth-section {padding-top:85px;padding-bottom:112px}
+.depth-intro {font-size:13px;color:var(--muted);max-width:790px;margin:0 0 27px}
+.depth-columns {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:15px}
+.depth-company {background:var(--paper);border:1px solid var(--line);padding:0 25px}
+.depth-company summary {display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;cursor:pointer;list-style:none}
+.depth-company summary::-webkit-details-marker{display:none}
+.depth-company summary strong {display:block;font-family:var(--serif);font-size:23px;font-weight:400;margin-bottom:7px}
+.depth-company summary small {color:var(--muted);font-size:11px}
+.depth-count {font-size:10px;color:var(--muted);white-space:nowrap}
+.depth-count span {font-size:17px;margin-left:5px}
+.depth-company[open] .depth-count span {display:inline-block;transform:rotate(45deg)}
+.depth-company ul {border-top:1px solid var(--line);margin:0;padding:14px 0 25px 22px}
+.depth-company li {color:#4b584e;font-size:12px;line-height:1.75;margin:8px 0}
+.toolkit-heading {font-family:var(--serif);font-weight:400;font-size:30px;margin:48px 0 24px}
+.toolkit-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.toolkit-item {border-top:1px solid var(--line-strong);padding-top:18px}
+.toolkit-item h4 {font-size:12px;margin:0 0 8px}
+.toolkit-item p {font-size:11px;color:var(--muted);line-height:1.75;margin:0}
+@media(max-width:980px){.expertise-grid,.depth-columns{grid-template-columns:1fr}.toolkit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.expertise-card{min-height:0}}
+@media(max-width:600px){.expertise-card{padding:24px}.toolkit-grid{grid-template-columns:1fr}.depth-company{padding:0 16px}.depth-company summary strong{font-size:20px}.depth-count{font-size:9px}}

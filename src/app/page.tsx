@@ -2,7 +2,7 @@ import { publicAsset } from '@/lib/site';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowIcon, SectionLabel } from '@/components/ui';
-import { completedCourses, development, experience, independentWork, profile, studies, supportingWork } from '@/data/content';
+import { completedCourses, cvWorkstreams, development, experience, independentWork, productCompetencies, profile, studies, supportingWork, technicalToolkit } from '@/data/content';
 
 export default function Home() {
   return (
@@ -10,8 +10,8 @@ export default function Home() {
       <section className="hero shell" aria-labelledby="hero-title">
         <div className="hero-main">
           <div className="eyebrow"><span className="eyebrow-line" /> Enterprise Product Manager <span className="eyebrow-bullet">·</span> Bengaluru</div>
-          <h1 id="hero-title">I make enterprise products work <em>beyond the spec sheet.</em></h1>
-          <p className="hero-desc">Nine years across B2B SaaS, developer APIs, enterprise communications, and connected devices. I work through the customer constraints, technical trade-offs, and delivery details that decide whether a product really works.</p>
+          <h1 id="hero-title">I build enterprise products where <em>software, data and devices meet.</em></h1>
+          <p className="hero-desc">Nine years across B2B SaaS, developer APIs, geospatial data, enterprise communications and connected devices. I turn customer needs and technical constraints into product requirements, roadmaps and delivery decisions.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">Selected work <ArrowIcon /></a>
             <a className="button button-secondary" href={profile.cv} download="Abhilash-Mishra-CV.pdf">Download CV <span aria-hidden="true">↗</span></a>
@@ -32,9 +32,20 @@ export default function Home() {
         <div><strong>1,200+</strong><span>Physical monitoring devices</span></div>
       </div></div>
 
+
+      <section className="section expertise-section shell" id="expertise" aria-labelledby="expertise-title">
+        <SectionLabel number="01 /" title="Product domains" />
+        <div className="section-intro"><h2 id="expertise-title">Breadth, with <em>technical depth.</em></h2><p>Four connected domains—not a generic list of product-management skills.</p></div>
+        <div className="expertise-grid">{productCompetencies.map((area) => <article className="expertise-card" key={area.no}>
+          <span className="expertise-no">{area.no} / DOMAIN</span><h3>{area.name}</h3><p>{area.description}</p>
+          <div className="expertise-evidence">{area.evidence}</div>
+          <div className="expertise-links">{area.slugs.map((slug) => { const work = studies.find((study) => study.slug === slug); return work ? <Link key={slug} href={`/work/${slug}`}>{work.subtitle} <ArrowIcon /></Link> : null; })}</div>
+        </article>)}</div>
+      </section>
+
       <section className="section work-section shell" id="work" aria-labelledby="work-title">
-        <SectionLabel number="01 /" title="Selected work" />
-        <div className="section-intro"><h2 id="work-title">Problems worth <em>working through.</em></h2><p>Five examples of product work — the context, my contribution, and what can be measured.</p></div>
+        <SectionLabel number="02 /" title="Selected work" />
+        <div className="section-intro"><h2 id="work-title">Problems worth <em>working through.</em></h2><p>Eight evidence-led product stories: the problem, my responsibility and outcomes at the level the CV supports.</p></div>
         <div className="work-list">
           {studies.map((study) => (
             <Link className="work-item" href={`/work/${study.slug}`} key={study.slug} aria-label={`Read case study: ${study.title}`}>
@@ -57,20 +68,33 @@ export default function Home() {
       </section>
 
       <section className="section approach-section" id="about" aria-labelledby="approach-title"><div className="shell">
-        <SectionLabel number="02 /" title="How I work" />
+        <SectionLabel number="03 /" title="How I work" />
         <div className="approach-grid"><div><h2 id="approach-title">Closer to the problem.<br /><em>Clearer on the decision.</em></h2></div><div className="approach-copy"><p>I&apos;ve worked with engineers, data teams, designers, account teams, and people in the field. The best product decisions usually start by making the actual customer constraint visible.</p><p>My work spans API management and pricing, enterprise access and self-service, provisioning, data quality, and AI-supported operations. Different technologies; the same need for a clear product problem.</p><div className="capabilities"><span>Discovery & prioritization</span><span>Developer platforms</span><span>Enterprise workflows</span><span>IoT & data products</span><span>AI-assisted operations</span><span>Go-to-market planning</span></div></div></div>
       </div></section>
 
       <section className="section experience-section shell" id="experience" aria-labelledby="experience-title">
-        <SectionLabel number="03 /" title="Experience" />
+        <SectionLabel number="04 /" title="Experience" />
         <div className="section-intro section-intro-tight"><h2 id="experience-title">The work, <em>in context.</em></h2><p>Across enterprise software, connected devices, and data products.</p></div>
         <div className="timeline">
           {experience.map((role) => <div className="timeline-row" key={role.company}><div className="timeline-date">{role.dates}</div><div><h3>{role.company}</h3><p className="timeline-title">{role.title}</p><p className="timeline-summary">{role.summary}</p></div></div>)}
         </div>
       </section>
 
+
+      <section className="section depth-section shell" id="depth" aria-labelledby="depth-title">
+        <SectionLabel number="05 /" title="Experience in detail" />
+        <div className="section-intro"><h2 id="depth-title">Beyond the <em>headline projects.</em></h2><p>Complete scope from my CV: the releases, customer workflows, device requirements, GTM and technical product work.</p></div>
+        <p className="depth-intro">Case studies go deep. This section preserves all 27 professional experience workstreams without turning each bullet into an exaggerated impact claim.</p>
+        <div className="depth-columns">{cvWorkstreams.map((company) => <details key={company.company} className="depth-company" open={company.company === 'Ambee'}>
+          <summary><span><strong>{company.company}</strong><small>{company.dates}</small></span><span className="depth-count">{company.entries.length} workstreams <span aria-hidden="true">＋</span></span></summary>
+          <ul>{company.entries.map((entry) => <li key={entry}>{entry}</li>)}</ul>
+        </details>)}</div>
+        <h3 className="toolkit-heading">Product methods & technical fluency</h3>
+        <div className="toolkit-grid">{technicalToolkit.map((group) => <div className="toolkit-item" key={group.title}><h4>{group.title}</h4><p>{group.items}</p></div>)}</div>
+      </section>
+
       <section className="section projects-section" aria-labelledby="projects-title"><div className="shell">
-        <SectionLabel number="04 /" title="Independent work" />
+        <SectionLabel number="06 /" title="Independent work" />
         <div className="section-intro"><h2 id="projects-title">Ideas I&apos;ve <em>built myself.</em></h2><p>Small products and prototypes alongside my enterprise work. These are independent initiatives, not employer case studies.</p></div>
         <div className="project-grid">{independentWork.map((project, index) => <article className="project-card" key={project.name}>
           <div className="project-top"><span>0{index+1}</span><span>{project.kind}</span></div>
@@ -79,7 +103,7 @@ export default function Home() {
       </div></section>
 
       <section className="section learning-section shell" id="education" aria-labelledby="education-title">
-        <SectionLabel number="05 /" title="Education & learning" />
+        <SectionLabel number="07 /" title="Education & learning" />
         <div className="section-intro section-intro-tight"><h2 id="education-title">A technical foundation.<br /><em>Still learning.</em></h2><p>Formal education, documented professional development, and separately verified course completions.</p></div>
         <div className="learning-layout">
           <div className="education-card"><span className="mini-label">Education</span><span className="education-year">2016</span><h3>Bachelor of Technology</h3><p>Electronics & Instrumentation Engineering</p><div className="education-school">NIST University <span>·</span> Berhampur, Odisha</div></div>
@@ -94,7 +118,7 @@ export default function Home() {
       </section>
 
       <section className="contact-section" id="contact" aria-labelledby="contact-title"><div className="shell contact-inner">
-        <div><SectionLabel number="06 /" title="Contact" /><h2 id="contact-title">Let’s talk about<br />what comes <em>next.</em></h2><p>For product management roles across enterprise platforms, developer products, AI workflows, and connected devices — or a thoughtful introduction.</p></div>
+        <div><SectionLabel number="08 /" title="Contact" /><h2 id="contact-title">Let’s talk about<br />what comes <em>next.</em></h2><p>For product management roles across enterprise platforms, developer products, AI workflows, and connected devices — or a thoughtful introduction.</p></div>
         <div className="contact-links"><a href={`mailto:${profile.email}`} className="contact-primary">Email me <ArrowIcon external /></a><a href={profile.linkedIn} target="_blank" rel="noopener noreferrer">Connect on LinkedIn <ArrowIcon external /><span className="sr-only"> (opens in a new tab)</span></a><a href={profile.cv} download="Abhilash-Mishra-CV.pdf">Download résumé <ArrowIcon /></a></div>
       </div></section>
     </main>

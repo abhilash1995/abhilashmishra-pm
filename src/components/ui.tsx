@@ -15,9 +15,9 @@ export function Header() {
       <div className="shell nav-shell">
         <Link href="/" className="brand" aria-label="Abhilash Mishra, homepage"><span className="brand-mark" aria-hidden="true">am.</span><span className="brand-text">Abhilash Mishra<span>Product Manager</span></span></Link>
         <nav className="site-nav" aria-label="Main navigation">
-          <Link href="/#work">Work</Link>
+          <Link href="/#expertise">Expertise</Link><Link href="/#work">Work</Link>
           <Link href="/#experience">Experience</Link>
-          <Link href="/#about">About</Link>
+          <Link href="/#depth">Full scope</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
         <a className="nav-resume" href={profile.cv} download="Abhilash-Mishra-CV.pdf">CV <span aria-hidden="true">↗</span></a>

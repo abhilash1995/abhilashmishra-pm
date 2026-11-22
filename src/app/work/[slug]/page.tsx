@@ -9,12 +9,12 @@ import { studies } from '@/data/content';
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return studies.map((study) => ({ slug: study.slug }));
+  return [...studies.map((study) => ({ slug: study.slug })), { slug: 'developer-api-platform' }];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const study = studies.find((item) => item.slug === slug);
+  const study = studies.find((item) => item.slug === (slug === 'developer-api-platform' ? 'api-gateway' : slug));
   if (!study) return { title: 'Not found' };
   return {
     title: study.title,
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CaseStudyPage({ params }: Props) {
   const { slug } = await params;
-  const study = studies.find((item) => item.slug === slug);
+  const study = studies.find((item) => item.slug === (slug === 'developer-api-platform' ? 'api-gateway' : slug));
   if (!study) notFound();
   const index = studies.findIndex((item) => item.slug === slug);
   const next = studies[(index + 1) % studies.length];
@@ -36,7 +36,7 @@ export default async function CaseStudyPage({ params }: Props) {
       <div className="shell">
         <div className="study-breadcrumb"><Link href="/#work">← All work</Link><span> / </span><span>{study.company}</span></div>
         <header className="study-hero">
-          <div className="study-meta"><span>CASE STUDY {study.index} / 05</span><span>{study.category}</span></div>
+          <div className="study-meta"><span>CASE STUDY {study.index} / 08</span><span>{study.category}</span></div>
           <h1>{study.title}</h1>
           <p className="study-deck">{study.overview}</p>
           <div className="study-byline"><div><span>COMPANY</span><strong>{study.company}</strong></div><div><span>ROLE</span><strong>{study.role}</strong></div><div><span>PERIOD</span><strong>{study.year}</strong></div></div>

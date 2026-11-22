@@ -92,12 +92,12 @@ export const studies: Study[] = [
     perspective: 'A useful product decision starts by identifying the exact workflow the customer cannot complete. A device or feature can be technically supported and still fail the customer’s real use case.'
   },
   {
-    slug: 'developer-api-platform',
+    slug: 'api-gateway',
     visual: { src: publicAsset('/visuals/developer-api-platform.svg'), alt: 'Illustrative flow from environmental data sources through API gateway controls to developer portal and enterprise dashboard' },
     index: '02',
     category: 'API & developer platforms',
     company: 'Ambee',
-    title: 'Turning environmental data into products developers could adopt.',
+    title: 'Making environmental APIs usable at platform scale.',
     subtitle: 'APIs · Gateway · Enterprise dashboard',
     overview: 'Environmental and satellite data became commercial API products with a management layer for access, usage, and subscriptions. My responsibility was product requirements and roadmap across the gateway, developer experience, and customer-facing dashboard.',
     year: 'Jan 2019 – Aug 2025',
@@ -192,10 +192,157 @@ export const studies: Study[] = [
     perspective: 'Sometimes the clearest demonstration of a technical data product is an experience that lets a prospective customer interact with the data before committing to an integration.',
     link: { href: 'https://maps.getambee.com/', label: 'Explore Ambee Climate Maps' }
   },
+{
+  "slug": "developer-experience",
+  "index": "04",
+  "category": "Product platform",
+  "company": "Ambee",
+  "title": "The developer journey is a product, not just documentation.",
+  "subtitle": "Enterprise API Dashboard · Documentation Hub · Interactive playground",
+  "overview": "Owned the customer-facing dashboard and documentation experience, including key provisioning, metering and role-based quota controls.",
+  "year": "Jan 2019 – Aug 2025",
+  "metrics": [
+    {
+      "value": "API keys",
+      "label": "Self-service provisioning"
+    },
+    {
+      "value": "RBAC",
+      "label": "Role-based quotas"
+    }
+  ],
+  "role": "Product Manager — Developer APIs, Data Solutions & IoT Systems",
+  "sections": [
+    {
+      "eyebrow": "01 / Context",
+      "title": "The product problem",
+      "paragraphs": [
+        "Enterprise developers need a path from discovering an API to testing it and managing access; documentation and the playground are a product surface, not just reference material."
+      ]
+    },
+    {
+      "eyebrow": "02 / My work",
+      "title": "Product responsibility",
+      "paragraphs": [
+        "I owned product vision and execution for the Enterprise API Dashboard and Documentation Hub, including self-service API key provisioning, usage metering, role-based quota controls and interactive developer playgrounds."
+      ]
+    },
+    {
+      "eyebrow": "03 / Outcome & boundaries",
+      "title": "Results and attribution",
+      "paragraphs": [
+        "This is separate from the API Gateway roadmap. The CV does not report individual conversion or revenue figures for this dashboard, so none are invented."
+      ]
+    }
+  ],
+  "perspective": "The most useful product narrative explains the scope, contribution and constraints without manufacturing implementation details.",
+  "visual": {
+    "src": publicAsset("/visuals/developer-experience.svg"),
+    "alt": "Conceptual workflow for The developer journey is a product, not just documentation."
+  }
+},
+{
+  "slug": "maptiles-platform",
+  "index": "05",
+  "category": "Product platform",
+  "company": "Ambee",
+  "title": "The geospatial delivery product behind the map.",
+  "subtitle": "MapTiles · Heatmaps · AQI, pollen and temperature",
+  "overview": "Owned roadmap and requirements for MapTiles/heatmaps serving over 20M monthly requests, separate from the Climate Maps website.",
+  "year": "Jan 2019 – Aug 2025",
+  "metrics": [
+    {
+      "value": "20M+",
+      "label": "Monthly tile service requests"
+    }
+  ],
+  "role": "Product Manager — Developer APIs, Data Solutions & IoT Systems",
+  "sections": [
+    {
+      "eyebrow": "01 / Context",
+      "title": "The product problem",
+      "paragraphs": [
+        "An interactive customer map is a different product from reusable geographic tiles and heatmaps. The CV documents both at Ambee."
+      ]
+    },
+    {
+      "eyebrow": "02 / My work",
+      "title": "Product responsibility",
+      "paragraphs": [
+        "I owned the MapTiles and heatmaps requirements and roadmap for AQI, pollen and temperature, and worked on GTM planning for MapTiles, including ICPs, packaging, positioning and Sales/Growth inputs."
+      ]
+    },
+    {
+      "eyebrow": "03 / Outcome & boundaries",
+      "title": "Results and attribution",
+      "paragraphs": [
+        "The tile service handled over 20 million monthly requests. That is not the 20,000+ monthly sessions reported for the Climate Maps website."
+      ]
+    }
+  ],
+  "perspective": "The most useful product narrative explains the scope, contribution and constraints without manufacturing implementation details.",
+  "visual": {
+    "src": publicAsset("/visuals/maptiles-platform.svg"),
+    "alt": "Conceptual workflow for The geospatial delivery product behind the map."
+  }
+},
+{
+  "slug": "connected-device-lifecycle",
+  "index": "06",
+  "category": "Product platform",
+  "company": "RingCentral · Ambee · Smart Joules · Phoenix Robotix",
+  "title": "Device products from field setup to enterprise provisioning.",
+  "subtitle": "Four companies · IoT · Telemetry · OTA · SIP/DECT",
+  "overview": "Connected-device product work across four employers, from field BLE provisioning and physical environmental fleets to firmware and enterprise endpoint support.",
+  "year": "Feb 2018 – Present",
+  "metrics": [
+    {
+      "value": "1,200+",
+      "label": "Physical Ambee monitoring devices"
+    },
+    {
+      "value": "30+",
+      "label": "RingCentral endpoint models"
+    },
+    {
+      "value": "12+",
+      "label": "Phoenix municipal deployments"
+    }
+  ],
+  "role": "Cross-company product and delivery experience",
+  "sections": [
+    {
+      "eyebrow": "01 / Context",
+      "title": "The product problem",
+      "paragraphs": [
+        "Phoenix Robotix involved 12+ municipal deployments, BLE/GPRS/Wi-Fi/Ethernet trade-offs, BLE field setup, industrial compliance and remote ICCC telemetry requirements."
+      ]
+    },
+    {
+      "eyebrow": "02 / My work",
+      "title": "Product responsibility",
+      "paragraphs": [
+        "Ambee involved 1,200+ physical air quality and weather devices, MQTT, vendor evaluation, calibration and OTA lifecycle requirements; Smart Joules involved Grafana visibility for L1-L3 and deJoule fleet firmware-update requirements; RingCentral involved 30+ SIP/DECT models, 80+ releases, provisioning and EOL/EOS."
+      ]
+    },
+    {
+      "eyebrow": "03 / Outcome & boundaries",
+      "title": "Results and attribution",
+      "paragraphs": [
+        "These are four distinct employers and product scopes, not a single system. Reported Ambee platform uptime was above 99.5%; no unsupported personal engineering attribution."
+      ]
+    }
+  ],
+  "perspective": "The most useful product narrative explains the scope, contribution and constraints without manufacturing implementation details.",
+  "visual": {
+    "src": publicAsset("/visuals/device-lifecycle.svg"),
+    "alt": "Conceptual workflow for Device products from field setup to enterprise provisioning."
+  }
+},
   {
     slug: 'ai-self-service',
     visual: { src: publicAsset('/visuals/ai-self-service.svg'), alt: 'Illustrative guided-support journey from device setup question through AVA assistance to guidance or support handoff' },
-    index: '04',
+    index: '07',
     category: 'AI & workflow automation',
     company: 'RingCentral',
     title: 'Helping administrators resolve device issues without another handoff.',
@@ -242,7 +389,7 @@ export const studies: Study[] = [
   {
     slug: 'ambees-academia',
     visual: { src: publicAsset('/visuals/ambees-academia.svg'), alt: 'Conceptual diagram of one shared SSO capability serving enterprise API dashboard access and academic-account handling' },
-    index: '05',
+    index: '08',
     category: '0→1 / access & onboarding',
     company: 'Ambee',
     title: 'Launching an academic offering without building a second identity system.',
@@ -373,4 +520,128 @@ export const development = [
 export const completedCourses = [
   { title: 'Claude Code 101', issuer: 'Anthropic', date: '01 Nov 2026', details: '12 lessons · 1 quiz · 1.5 hours', visual: publicAsset('/visuals/claude-code-badge.png') },
   { title: 'Introduction to Claude Cowork', issuer: 'Anthropic', date: '01 Nov 2026', details: '14 lessons · 1 quiz · 2.5 hours', visual: publicAsset('/visuals/cowork-badge.png') }
+] as const;
+
+export const cvWorkstreams = [
+  {
+    "company": "RingCentral",
+    "dates": "Dec 2025 – Present",
+    "entries": [
+      "Fortune 500 account: Shared Line Group gap in single-user vs multi-user provisioning, 4,845 locations, $2.55M account ARR.",
+      "Supported AVA AI-assisted provisioning and troubleshooting; 22% Tier-2 reduction reported by Business/Product stakeholders.",
+      "Introduced LLM workflow turning device specifications into draft Support Portal articles, reducing writer handoffs.",
+      "Catalog, licensing and merchandising across AT&T, Vodafone, TELUS, Charter and RISE, seven currencies and NA/EMEA/APAC.",
+      "Multi-tier seat licensing and self-service purchasing, with 30% ordering workflow velocity improvement reported by Business/Product.",
+      "30+ certified SIP/DECT endpoint models across 80+ catalog releases, vendor handoffs, release notes and EOL/EOS.",
+      "n8n and LLM workflows for PRD review and billing-catalog synchronization."
+    ]
+  },
+  {
+    "company": "Smart Joules",
+    "dates": "Sep 2025 – Nov 2025",
+    "entries": [
+      "Telemetry ingestion and fleet-observability requirements; centralized Grafana monitoring for L1/L2/L3.",
+      "deJoule one-click fleet firmware update requirements, edge acceptance criteria and data-quality validation."
+    ]
+  },
+  {
+    "company": "Ambee",
+    "dates": "Jan 2019 – Aug 2025",
+    "entries": [
+      "Environmental and satellite REST/GraphQL APIs; sub-200ms queries under load, ₹1.5Cr+ net-new contract revenue across the product portfolio.",
+      "API Gateway: 10K+ users and 10M+ monthly API calls; authentication, limits, subscriptions and usage tracking.",
+      "MapTiles and heatmap roadmap: AQI, pollen and temperature; 20M+ requests/month; maps included 48-hour playback and international AQI scales.",
+      "Enterprise API Dashboard and Documentation Hub: API keys, metering, RBAC quotas, interactive playground.",
+      "Climate Maps 0-to-1 in four months: 20K+ sessions/month, AQI/pollen/wildfire/weather, enterprise demos and developer interest.",
+      "Requirements for environmental data ingestion, processing and quality using satellite and sensor sources.",
+      "Observability and alerting requirements using Prometheus, Grafana and AWS CloudWatch.",
+      "Academia PRD to production in under 30 days; shared SSO, 100+ qualified inbound leads in two months and first commercial enterprise contract within six.",
+      "ClimaChain climate forecasting and AI-feature discovery; SmartFarmInData agro-weather and satellite analytics discovery/requirements.",
+      "Climate API, MapTiles and IoT GTM: ICPs, packaging, positioning and target-account inputs with Sales/Growth.",
+      "1,200+ physical indoor/outdoor air-quality devices and weather stations, MQTT into B2B SaaS, platform uptime reported above 99.5%.",
+      "Device lifecycle with Sales Engineering: STM32, ESP32, Quectel, Renesas, vendor evaluation, calibration and OTA."
+    ]
+  },
+  {
+    "company": "Phoenix Robotix (Aurassure & DATOMS)",
+    "dates": "Feb 2018 – Dec 2018",
+    "entries": [
+      "Industrial asset monitoring and environmental compliance requirements and backlogs.",
+      "BLE/GPRS/Wi-Fi/Ethernet edge-node trade-offs for power, field reliability and cost.",
+      "RFQ/RFP validation, tender-to-FRS/SRS and EMS/DDS smart-city and industrial solution proposals.",
+      "Product lifecycle for 12+ municipal smart-city deployments across firmware, cloud and dashboard teams.",
+      "On-ground provisioning workflows using local BLE with firmware and field teams.",
+      "Remote diagnostics and telemetry validation for municipal ICCC dashboards to reduce data dropouts."
+    ]
+  }
+] as const;
+
+export const productCompetencies = [
+  {
+    "no": "01",
+    "name": "API & developer platforms",
+    "description": "API Gateway, documentation, playground, access controls, quotas, metering and monetization.",
+    "evidence": "10K+ users · 10M+ API calls/month",
+    "slugs": [
+      "api-gateway",
+      "developer-experience"
+    ]
+  },
+  {
+    "no": "02",
+    "name": "Geospatial & data products",
+    "description": "Climate Maps, MapTiles, heatmaps, environmental APIs and data requirements.",
+    "evidence": "20M+ tile requests · 20K+ map sessions",
+    "slugs": [
+      "climate-maps",
+      "maptiles-platform"
+    ]
+  },
+  {
+    "no": "03",
+    "name": "Connected-device lifecycle",
+    "description": "Physical IoT fleets, provisioning, telemetry, firmware, observability and SIP/DECT certification.",
+    "evidence": "1,200+ devices · 30+ endpoints",
+    "slugs": [
+      "connected-device-lifecycle",
+      "enterprise-provisioning"
+    ]
+  },
+  {
+    "no": "04",
+    "name": "Enterprise access, AI & workflows",
+    "description": "Shared SSO, AVA troubleshooting, self-service purchasing and LLM-assisted operations.",
+    "evidence": "Academia <30 days · 22% reported escalations reduction",
+    "slugs": [
+      "ambees-academia",
+      "ai-self-service"
+    ]
+  }
+] as const;
+
+export const technicalToolkit = [
+  {
+    "title": "Product strategy & delivery",
+    "items": "Customer discovery, market/competitive analysis, roadmaps, PRDs, prioritization, acceptance criteria, Agile/Scrum and stakeholder leadership"
+  },
+  {
+    "title": "GTM & commercial",
+    "items": "ICPs, segmentation, product packaging, monetization, competitive positioning, Sales/Growth partnerships"
+  },
+  {
+    "title": "Enterprise SaaS & access",
+    "items": "Multi-tenancy, RBAC, SSO, digital purchasing, licensing, billing and enterprise self-service"
+  },
+  {
+    "title": "Developer, API & geospatial",
+    "items": "REST, GraphQL, API gateways, key provisioning, auth, rate limits, usage, MapTiles, heatmaps"
+  },
+  {
+    "title": "Connected devices & data",
+    "items": "MQTT, OTA firmware, SIP/DECT, telemetry, Grafana, Prometheus, AWS CloudWatch"
+  },
+  {
+    "title": "Tools",
+    "items": "SQL/PostgreSQL, Mixpanel, Jira, Confluence, Figma, FigJam, Postman, Claude, Gemini, Codex, Git, JSON/YAML, n8n"
+  }
 ] as const;
